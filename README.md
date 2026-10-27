@@ -55,7 +55,7 @@ then open a PR from each branch into `main`:
 In the repo go to **Settings > Secrets and variables > Actions**:
 
 - **Variable** `HEALTH_CHECK_URL`: your deployed health URL, e.g. `https://your-api.railway.app/api/health`. If unset, the workflow uses a placeholder URL, reports "unhealthy", and still passes.
-- **Secret** `DISCORD_WEBHOOK_URL` (optional): when set, the result is posted to Discord.
+
 
 Test it any time from **Actions > Scheduled Health Check > Run workflow**.
 
