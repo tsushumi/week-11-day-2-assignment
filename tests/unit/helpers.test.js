@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { formatAmount, generateRef } from '../../utils/helpers.js';
+import { formatAmount, generateRef, capitalize } from '../../utils/helpers.js';
 
 describe('formatAmount', () => {
   it('should format a whole number with two decimal places', () => {
@@ -20,5 +20,16 @@ describe('generateRef', () => {
   it('should generate unique references', () => {
     const refs = new Set(Array.from({ length: 1000 }, () => generateRef()));
     expect(refs.size).toBe(1000);
+  });
+});
+
+describe('capitalize', () => {
+  it('should capitalize the first letter of a string', () => {
+    expect(capitalize('hello world')).toBe('Hello world');
+  });
+
+  it('should handle an empty string and reject non-strings', () => {
+    expect(capitalize('')).toBe('');
+    expect(() => capitalize(42)).toThrow(TypeError);
   });
 });
