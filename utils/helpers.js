@@ -11,7 +11,7 @@ export function formatAmount(amount, currency = 'KES') {
   if (amount < 0) {
     throw new RangeError('Amount cannot be negative');
   }
-  return `${currency} ${amount.toFixed(2)}`;
+  return `${amount.toFixed(2)} ${currency}`;
 }
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
