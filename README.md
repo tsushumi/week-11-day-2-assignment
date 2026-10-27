@@ -68,3 +68,6 @@ git commit -am "Test PR workflow"
 git push -u origin test-pr-workflow
 # open a pull request into main on GitHub
 ```
+
+<img width="1366" height="720" alt="image" src="https://github.com/user-attachments/assets/2df7e1d5-377f-4492-93d7-4a48a90e02dd" />
+
